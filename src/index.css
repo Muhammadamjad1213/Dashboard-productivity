@@ -1,0 +1,57 @@
+@import "tailwindcss";
+:root {
+  /* Light Theme Variables (default) */
+  --background-color: #ffffff;
+  --text-color: #333333;
+  --primary-color: #007bff;
+  --secondary-color: #6c757d;
+  --border-color: #e0e0e0;
+  --card-background: #f8f9fa;
+}
+
+[data-theme="dark"] {
+  /* Dark Theme Variables */
+  --background-color: #1a202c;
+  --text-color: #e2e8f0;
+  --primary-color: #61dafb; /* A nice React blue */
+  --secondary-color: #a0aec0;
+  --border-color: #4a5568;
+  --card-background: #2d3748;
+}
+
+/* Global styles that use the variables */
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--text-color);
+}
+
+.card {
+  background-color: var(--card-background);
+  border: 1px solid var(--border-color);
+  padding: 20px;
+  margin: 10px;
+  border-radius: 8px;
+}
+
+button {
+  background-color: var(--primary-color);
+  color: var(--background-color); /* Text color for buttons should contrast */
+  border: 1px solid var(--primary-color);
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+button:hover {
+  opacity: 0.8;
+}
